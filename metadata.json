@@ -1,0 +1,6 @@
+{
+  "name": "NJS Public School Portal & Ask AI Assistant",
+  "description": "NJS Public School official portal featuring 24/7 intelligent Ask AI assistant, real-time admissions guidance, school calendar, verified circulars, and YouTube @anantgahlaut updates.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

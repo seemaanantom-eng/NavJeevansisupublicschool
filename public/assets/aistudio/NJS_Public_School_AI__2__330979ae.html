@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NJS Public School | Excellence in Education & AI Portal</title>
+  <meta name="description" content="NJS Public School - Creator of Knowledge. Official portal with embedded AI School Assistant, holiday verification, circulars, Hastinapur excursions, 400m Olympic track, and YouTube @anantgahlaut.">
+  <link rel="icon" href="https://seemaanantom-eng.github.io/NJSpublicSchool/apple.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --secondary: #1e293b;
+      --accent: #10b981;
+      --accent-hover: #059669;
+      --youtube-red: #ff0000;
+      --indigo: #4f46e5;
+      --amber: #f59e0b;
+      --text: #334155;
+      --text-light: #64748b;
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+      --shadow-lg: 0 20px 30px -10px rgba(0, 0, 0, 0.15);
+      --radius: 18px;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    /* Top Announcement Bar */
+    .top-bar {
+      background: #090d16;
+      color: #94a3b8;
+      font-size: 0.82rem;
+      padding: 8px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .top-bar a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .top-bar .yt-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 0, 0, 0.15);
+      color: #ff6b6b;
+      padding: 3px 12px;
+      border-radius: 20px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: 1px solid rgba(255, 0, 0, 0.3);
+    }
+    .top-bar .yt-badge:hover {
+      background: #ff0000;
+      color: #fff;
+    }
+    .top-bar .ai-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      padding: 3px 12px;
+      border-radius: 20px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    /* Main Navigation */
+    header {
+      background: var(--white);
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+    .logo-img {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .logo-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    .logo-text p {
+      font-size: 0.72rem;
+      color: var(--accent);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      align-items: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: var(--indigo);
+    }
+    .btn-ai-nav {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: #fff !important;
+      padding: 8px 18px;
+      border-radius: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem !important;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+      cursor: pointer;
+      border: none;
+    }
+    .btn-yt {
+      background: #ff0000;
+      color: #fff !important;
+      padding: 8px 16px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem !important;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #090e17 0%, #1e1b4b 50%, #0f172a 100%);
+      color: var(--white);
+      padding: 70px 24px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 6px 18px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #34d399;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 20px;
+    }
+    .hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      line-height: 1.15;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      color: #cbd5e1;
+      max-width: 680px;
+      margin: 0 auto 30px;
+      font-weight: 300;
+    }
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: var(--white);
+      padding: 12px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--white);
+      padding: 12px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.2s;
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Embedded AI Quick Assistant Section */
+    .ai-banner-section {
+      background: linear-gradient(135deg, #042f2e 0%, #064e3b 50%, #0f172a 100%);
+      border-radius: 24px;
+      padding: 36px 30px;
+      color: #fff;
+      margin-bottom: 50px;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      box-shadow: 0 15px 35px -10px rgba(4, 47, 46, 0.4);
+      position: relative;
+    }
+    .ai-banner-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .ai-banner-title h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: #a7f3d0;
+      margin-bottom: 6px;
+    }
+    .ai-banner-title p {
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+    .ai-quick-inputs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .ai-quick-inputs input {
+      flex: 1;
+      padding: 14px 20px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(15, 23, 42, 0.8);
+      color: #fff;
+      font-size: 0.95rem;
+      outline: none;
+      font-family: inherit;
+    }
+    .ai-quick-inputs input:focus {
+      border-color: #34d399;
+      box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.2);
+    }
+    .ai-quick-inputs button {
+      background: #10b981;
+      color: #fff;
+      border: none;
+      padding: 0 24px;
+      border-radius: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s;
+    }
+    .ai-quick-inputs button:hover {
+      background: #059669;
+    }
+    .ai-preset-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .ai-chip {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #e2e8f0;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .ai-chip:hover {
+      background: rgba(16, 185, 129, 0.25);
+      border-color: #34d399;
+      color: #fff;
+    }
+    .ai-response-box {
+      margin-top: 20px;
+      padding: 16px 20px;
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 16px;
+      border: 1px solid rgba(52, 211, 153, 0.3);
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: #e2e8f0;
+      display: none;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    /* YouTube Section */
+    .yt-section {
+      background: linear-gradient(135deg, #180505 0%, #290808 50%, #150202 100%);
+      border-radius: 24px;
+      padding: 40px 36px;
+      color: #fff;
+      margin-bottom: 60px;
+      border: 1px solid rgba(255, 0, 0, 0.2);
+      box-shadow: 0 15px 35px -10px rgba(255, 0, 0, 0.25);
+    }
+    .yt-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .yt-header h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: #ff6b6b;
+      margin-bottom: 6px;
+    }
+    .yt-header p {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+    .btn-subscribe {
+      background: #ff0000;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+    }
+    .btn-subscribe:hover {
+      background: #cc0000;
+    }
+
+    /* Pillars */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+    .pillar-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--accent);
+      transition: transform 0.2s;
+    }
+    .pillar-card:hover {
+      transform: translateY(-4px);
+    }
+    .pillar-card h4 {
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .pillar-card p {
+      color: var(--text-light);
+      font-size: 0.92rem;
+    }
+
+    /* Notice Board Section in HTML */
+    .notices-section {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 36px 30px;
+      box-shadow: var(--shadow);
+      margin-bottom: 60px;
+      border: 1px solid #e2e8f0;
+    }
+    .notices-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .notices-header h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--primary);
+    }
+    .notice-item {
+      padding: 16px;
+      background: #f8fafc;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      border-left: 4px solid #10b981;
+    }
+    .notice-item.holiday {
+      border-left-color: #ef4444;
+      background: #fef2f2;
+    }
+    .notice-item.exam {
+      border-left-color: #f59e0b;
+      background: #fffbeb;
+    }
+    .notice-title {
+      font-weight: 700;
+      color: #0f172a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+    .notice-date {
+      font-size: 0.75rem;
+      color: #64748b;
+      font-weight: 500;
+    }
+    .notice-desc {
+      font-size: 0.88rem;
+      color: #334155;
+    }
+
+    /* Floating AI Chat Assistant Widget */
+    .ai-fab {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      box-shadow: 0 10px 25px rgba(16, 185, 129, 0.45);
+      cursor: pointer;
+      z-index: 999;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 3px solid rgba(255, 255, 255, 0.8);
+    }
+    .ai-fab:hover {
+      transform: scale(1.08) rotate(5deg);
+    }
+    .ai-fab-badge {
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      background: #ff0000;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 10px;
+      border: 2px solid #fff;
+    }
+
+    /* Floating Chat Drawer Window */
+    .ai-chat-window {
+      position: fixed;
+      bottom: 96px;
+      right: 24px;
+      width: 380px;
+      max-width: calc(100vw - 32px);
+      height: 540px;
+      max-height: calc(100vh - 120px);
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      border: 1px solid #e2e8f0;
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+      z-index: 1000;
+      animation: slideUp 0.25s ease-out;
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .ai-chat-header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #fff;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .ai-chat-header-info h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #34d399;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .ai-chat-header-info p {
+      font-size: 0.72rem;
+      color: #94a3b8;
+    }
+    .ai-close-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      color: #fff;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .ai-messages {
+      flex: 1;
+      padding: 16px;
+      overflow-y: auto;
+      background: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .msg {
+      max-width: 85%;
+      padding: 10px 14px;
+      border-radius: 14px;
+      font-size: 0.88rem;
+      line-height: 1.45;
+      word-break: break-word;
+    }
+    .msg.bot {
+      background: #ffffff;
+      color: #1e293b;
+      align-self: flex-start;
+      border: 1px solid #e2e8f0;
+      border-bottom-left-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    }
+    .msg.user {
+      background: #10b981;
+      color: #ffffff;
+      align-self: flex-end;
+      border-bottom-right-radius: 4px;
+    }
+    .ai-chat-footer {
+      padding: 12px;
+      background: #fff;
+      border-top: 1px solid #e2e8f0;
+    }
+    .ai-chat-input-row {
+      display: flex;
+      gap: 8px;
+    }
+    .ai-chat-input-row input {
+      flex: 1;
+      padding: 10px 14px;
+      border-radius: 20px;
+      border: 1px solid #cbd5e1;
+      outline: none;
+      font-size: 0.88rem;
+    }
+    .ai-chat-input-row input:focus {
+      border-color: #10b981;
+    }
+    .ai-send-btn {
+      background: #10b981;
+      color: #fff;
+      border: none;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    footer {
+      background: var(--primary);
+      color: #94a3b8;
+      padding: 40px 24px 20px;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+    footer a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    /* Mobile Responsive View */
+    @media (max-width: 768px) {
+      .top-bar {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+        flex-direction: column;
+        text-align: center;
+      }
+      .nav-container {
+        padding: 12px 16px;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .nav-container nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+      }
+      .hero {
+        padding: 40px 16px;
+      }
+      .hero h2 {
+        font-size: 2rem;
+      }
+      .container {
+        padding: 24px 12px;
+      }
+      .ai-chat-window {
+        width: 100%;
+        max-width: 100vw;
+        right: 0;
+        bottom: 0;
+        height: 85vh;
+        max-height: 85vh;
+        border-radius: 20px 20px 0 0;
+      }
+      .ai-fab {
+        bottom: 16px;
+        right: 16px;
+        width: 52px;
+        height: 52px;
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div>
+      📢 <strong>NJS Public School Portal</strong> • <a href="mailto:seemaanantom@gmail.com">seemaanantom@gmail.com</a>
+    </div>
+    <div style="display: flex; gap: 10px; align-items: center;">
+      <span class="ai-badge" onclick="toggleAiDrawer()">🤖 AI सहायता (Holo Mode)</span>
+      <a href="https://www.youtube.com/@anantgahlaut" target="_blank" class="yt-badge">
+        ▶ YouTube @anantgahlaut
+      </a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo-area">
+        <img src="https://seemaanantom-eng.github.io/NJSpublicSchool/apple.jpg" class="logo-img" alt="NJS School Logo">
+        <div class="logo-text">
+          <h1>NJS PUBLIC SCHOOL</h1>
+          <p>Creator of Knowledge</p>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#notices">Notices</a></li>
+          <li><a href="#youtube">YouTube</a></li>
+          <li><a href="#sports">Sports</a></li>
+          <li>
+            <button class="btn-ai-nav" onclick="toggleAiDrawer()">
+              <span>✨ Ask AI Assistant</span>
+            </button>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@anantgahlaut" target="_blank" class="btn-yt">
+              <span>@anantgahlaut</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="about">
+    <div class="hero-tag">✨ Creator of Knowledge • AI Enabled Campus</div>
+    <h2>NJS Public School</h2>
+    <p>
+      Excellence in Education, Character Building & Innovation. With dedicated school AI assistance for parents, students, and teachers.
+    </p>
+    <div class="hero-buttons">
+      <button class="btn-primary" onclick="toggleAiDrawer()">
+        <span>🤖 Open School AI Assistant</span>
+      </button>
+      <a href="#notices" class="btn-secondary">
+        <span>📜 View Circulars & Holidays</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- Embedded AI School Assistant Section (AI in HTML code) -->
+    <section class="ai-banner-section" id="ai-hub">
+      <div class="ai-banner-header">
+        <div class="ai-banner-title">
+          <h3>🤖 AI School Assistant (हिंदी / Hinglish / English)</h3>
+          <p>अभिभावक (Parents) और विद्यार्थी (Students) छुट्टियों, परीक्षा व नोटिस की तुरंत पुष्टि कर सकते हैं</p>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <span style="background: rgba(16, 185, 129, 0.2); color: #6ee7b7; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;">
+            ⚡ Gemini 3.8 Flash Powered
+          </span>
+          <button onclick="openNoticeModal()" style="background: #4f46e5; color: #fff; border: none; padding: 4px 14px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; cursor: pointer;">
+            ➕ Notice Manager
+          </button>
+        </div>
+      </div>
+
+      <div class="ai-quick-inputs">
+        <input type="text" id="embedded-ai-input" placeholder="Type here (e.g. 'Kal holiday hai kya?', 'Is school open tomorrow?', 'Hastinapur trip details')..." onkeydown="if(event.key==='Enter') sendEmbeddedQuery()">
+        <button onclick="sendEmbeddedQuery()">
+          <span>Ask AI</span>
+        </button>
+      </div>
+
+      <!-- Quick Preset Buttons -->
+      <div class="ai-preset-chips">
+        <div class="ai-chip" onclick="handlePreset('Kal holiday hai kya?')">📅 "Kal holiday hai kya?"</div>
+        <div class="ai-chip" onclick="handlePreset('Is school open tomorrow?')">🏫 "Is school open tomorrow?"</div>
+        <div class="ai-chip" onclick="openNoticeModal()" style="border-color: rgba(99, 102, 241, 0.6); color: #a5b4fc; font-weight: bold;">➕ "Add Notice (नोटिस जोड़ें)"</div>
+        <div class="ai-chip" onclick="handlePreset('क्या कोई नया नोटिस आया है?')">📢 "क्या कोई नया नोटिस आया है?"</div>
+        <div class="ai-chip" onclick="handlePreset('Hastinapur excursion trip kab hai?')">🚌 "Hastinapur trip details"</div>
+      </div>
+
+      <div class="ai-response-box" id="embedded-ai-response">
+        <div id="ai-response-content"></div>
+      </div>
+    </section>
+
+    <!-- YouTube Banner -->
+    <section class="yt-section" id="youtube">
+      <div class="yt-header">
+        <div>
+          <h3>Official YouTube Channel: @anantgahlaut</h3>
+          <p>वार्षिक उत्सव, 400m स्पोर्ट्स रेस, सांस्कृतिक कार्यक्रम व व्याख्यान देखें</p>
+        </div>
+        <a href="https://www.youtube.com/@anantgahlaut" target="_blank" class="btn-subscribe">
+          ▶ Subscribe @anantgahlaut
+        </a>
+      </div>
+    </section>
+
+    <!-- Official Notices Board Section -->
+    <section class="notices-section" id="notices">
+      <div class="notices-header">
+        <div>
+          <h3>📜 Active School Notices & Circulars</h3>
+          <p style="color: #64748b; font-size: 0.88rem;">Official announcements verified by NJS School Administration</p>
+        </div>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <button onclick="openNoticeModal()" style="background: #4f46e5; color: #fff; border: none; padding: 8px 18px; border-radius: 20px; font-weight: 600; cursor: pointer; font-size: 0.82rem;">
+            ➕ Add Notification (Admin)
+          </button>
+          <button onclick="clearAllNotices()" style="background: #fff1f2; color: #e11d48; border: 1px solid #fecdd3; padding: 8px 18px; border-radius: 20px; font-weight: 600; cursor: pointer; font-size: 0.82rem;">
+            🗑️ Clear All (सभी हटाएं)
+          </button>
+          <button onclick="askHoliday()" style="background: #0f172a; color: #fff; border: none; padding: 8px 18px; border-radius: 20px; font-weight: 600; cursor: pointer; font-size: 0.82rem;">
+            🏫 Holiday Status
+          </button>
+        </div>
+      </div>
+
+      <div id="notices-container">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+    <!-- Pillars of Education -->
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <h4>🏛️ Hastinapur Excursion</h4>
+        <p>Curated educational trips to historic Hastinapur antiquities (Kuru Empire & sacred Jain temples) with 24/7 faculty supervision and buffet meals.</p>
+      </div>
+      <div class="pillar-card" id="sports">
+        <h4>🏃 400m Olympic-Grade Track</h4>
+        <p>Full-sized athletics facilities including 400-meter all-weather track, basketball courts, and FIFA-standard turf for athletics trials.</p>
+      </div>
+      <div class="pillar-card">
+        <h4>🏺 Clay Sculpting & Pottery</h4>
+        <p>Tactile ceramic and pottery workshops using terracotta and stoneware clay for creative fine arts expression.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Floating AI Chat Assistant FAB Button -->
+  <div class="ai-fab" onclick="toggleAiDrawer()" title="Ask School AI Assistant">
+    <span>🤖</span>
+    <span class="ai-fab-badge">AI</span>
+  </div>
+
+  <!-- Floating AI Chat Window -->
+  <div class="ai-chat-window" id="ai-chat-window">
+    <div class="ai-chat-header">
+      <div class="ai-chat-header-info">
+        <h4>🤖 NJS School AI सहायक</h4>
+        <p>English • Hinglish • Hindi (India)</p>
+      </div>
+      <button class="ai-close-btn" onclick="toggleAiDrawer()">✕</button>
+    </div>
+
+    <div class="ai-messages" id="chat-messages">
+      <div class="msg bot">
+        नमस्ते! <strong>NJS Public School</strong> AI सहायता में आपका स्वागत है।<br><br>
+        📌 <strong>Holiday & Open Rule:</strong><br>
+        • यदि छुट्टी का नोटिस जोड़ा गया है, तो AI छुट्टी (Leave) की पुष्टि करेगा।<br>
+        • यदि कोई छुट्टी का नोटिस नहीं जोड़ा गया है, तो AI दोनों भाषाओं में स्पष्ट कहेगा कि <strong>School is OPEN (स्कूल खुला है)</strong>!<br><br>
+        अभिभावक व विद्यार्थी पूछ सकते हैं:<br>
+        • <em>"Kal holiday hai kya?"</em> या <em>"Is school open tomorrow?"</em><br>
+        • <em>"Koi naya notice aaya hai?"</em><br>
+        • <em>"Hastinapur excursion details?"</em>
+      </div>
+    </div>
+
+    <div class="ai-chat-footer">
+      <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 6px; font-size: 0.72rem;">
+        <span style="color: #64748b;">NJS School AI Assistant</span>
+        <button onclick="openNoticeModal()" style="background: none; border: none; color: #4f46e5; font-weight: 700; cursor: pointer;">
+          ➕ Add Notice
+        </button>
+      </div>
+      <div class="ai-chat-input-row">
+        <input type="text" id="chat-input" placeholder="Type question (e.g. 'Kal holiday hai kya?')..." onkeydown="if(event.key==='Enter') sendChatMessage()">
+        <button class="ai-send-btn" onclick="sendChatMessage()">➤</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notice Modal for Adding Notices in HTML -->
+  <div id="html-notice-modal" style="display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(4px); z-index: 9999; justify-content: center; align-items: center; padding: 16px;">
+    <div style="background: #fff; border-radius: 20px; max-width: 480px; width: 100%; padding: 24px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2);">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <h4 style="margin: 0; font-size: 1.15rem; color: #0f172a;">📢 School Notice Manager</h4>
+        <button onclick="closeNoticeModal()" style="background: none; border: none; font-size: 1.2rem; cursor: pointer; color: #64748b;">✕</button>
+      </div>
+
+      <div style="background: #fef3c7; border: 1px solid #fde68a; padding: 10px 14px; border-radius: 12px; font-size: 0.8rem; color: #92400e; margin-bottom: 16px; line-height: 1.5;">
+        <strong>📌 Holiday Rule:</strong> यदि आप छुट्टी का नोटिस जोड़ेंगे तो AI छुट्टी (Leave) बताएगा। यदि छुट्टी का नोटिस नहीं जोड़ा गया है, तो AI दोनों भाषाओं (Hindi और English) में कहेगा कि <b>School is OPEN (स्कूल खुला है)</b>!
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div>
+          <label style="font-size: 0.8rem; font-weight: 600; color: #334155; display: block; margin-bottom: 4px;">Title (शीर्षक)</label>
+          <input type="text" id="new-modal-title" placeholder="उदा. Heavy Rain Alert: Tomorrow School Closed" style="width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 10px; font-size: 0.85rem;">
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <div>
+            <label style="font-size: 0.8rem; font-weight: 600; color: #334155; display: block; margin-bottom: 4px;">Category (प्रकार)</label>
+            <select id="new-modal-cat" style="width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 10px; font-size: 0.85rem;">
+              <option value="holiday">Holiday / छुट्टी (Leave)</option>
+              <option value="exam">Exam / परीक्षा</option>
+              <option value="event">Event / खेलकूद / टूर</option>
+              <option value="general">General / सामान्य</option>
+            </select>
+          </div>
+          <div>
+            <label style="font-size: 0.8rem; font-weight: 600; color: #334155; display: block; margin-bottom: 4px;">Day / Date</label>
+            <input type="text" id="new-modal-date" value="Tomorrow / कल" style="width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 10px; font-size: 0.85rem;">
+          </div>
+        </div>
+
+        <div>
+          <label style="font-size: 0.8rem; font-weight: 600; color: #334155; display: block; margin-bottom: 4px;">Notice Details (विवरण)</label>
+          <textarea id="new-modal-desc" rows="3" placeholder="उदा. भारी बारिश के कारण कल स्कूल में अवकाश घोषित किया गया है..." style="width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 10px; font-size: 0.85rem; font-family: inherit;"></textarea>
+        </div>
+
+        <div>
+          <label style="font-size: 0.8rem; font-weight: 700; color: #b91c1c; display: flex; align-items: center; gap: 6px; margin-bottom: 4px;">
+            🔒 Admin Password (एडमिन पासवर्ड दर्ज करें):
+          </label>
+          <div style="position: relative;">
+            <input type="password" id="new-modal-password" placeholder="Enter private admin password..." style="width: 100%; padding: 10px 40px 10px 12px; border: 2px solid #cbd5e1; border-radius: 10px; font-size: 0.88rem; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='#4f46e5'" onblur="this.style.borderColor='#cbd5e1'">
+            <button type="button" onclick="toggleNoticePasswordVisibility()" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; font-size: 0.9rem; color: #64748b;">👁️</button>
+          </div>
+          <div id="modal-password-error" style="display: none; color: #dc2626; font-size: 0.78rem; margin-top: 4px; font-weight: 600;">
+            ❌ गलत पासवर्ड! कृपया सही एडमिन पासवर्ड दर्ज करें।
+          </div>
+        </div>
+
+        <button onclick="saveModalNotice()" style="background: #4f46e5; color: #fff; border: none; padding: 12px; border-radius: 12px; font-weight: 700; cursor: pointer; font-size: 0.9rem; margin-top: 6px;">
+          🚀 Publish Notification / Notice (नोटिफिकेशन जारी करें)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 NJS Public School • Official Website: <a href="https://seemaanantom-eng.github.io/NJSpublicSchool/" target="_blank">seemaanantom-eng.github.io/NJSpublicSchool</a> • YouTube: <a href="https://www.youtube.com/@anantgahlaut" target="_blank">@anantgahlaut</a></p>
+  </footer>
+
+  <!-- Embedded AI Script (AI IN HTML CODE) -->
+  <script>
+    // In-memory notices data
+    // In-memory notices data (cleared of all previous notices)
+    let localNotices = [];
+
+    // Notice Modal Controls
+    function openNoticeModal() {
+      const modal = document.getElementById('html-notice-modal');
+      if (modal) modal.style.display = 'flex';
+    }
+
+    function closeNoticeModal() {
+      const modal = document.getElementById('html-notice-modal');
+      if (modal) modal.style.display = 'none';
+    }
+
+    function toggleNoticePasswordVisibility() {
+      const pwd = document.getElementById('new-modal-password');
+      if (pwd) {
+        pwd.type = pwd.type === 'password' ? 'text' : 'password';
+      }
+    }
+
+    function saveModalNotice() {
+      const titleInput = document.getElementById('new-modal-title');
+      const catInput = document.getElementById('new-modal-cat');
+      const dateInput = document.getElementById('new-modal-date');
+      const descInput = document.getElementById('new-modal-desc');
+      const pwdInput = document.getElementById('new-modal-password');
+      const pwdError = document.getElementById('modal-password-error');
+
+      const title = titleInput.value.trim();
+      const content = descInput.value.trim();
+      const category = catInput.value;
+      const date = dateInput.value.trim() || 'Today';
+      const rawPassword = pwdInput ? pwdInput.value : '';
+
+      if (!title || !content) {
+        alert('Please fill both Title and Details for the notice.');
+        return;
+      }
+
+      // Admin Password requirement: "gahlaut"
+      const isPasswordValid = rawPassword.trim().toLowerCase() === 'gahlaut';
+      if (!isPasswordValid) {
+        if (pwdError) {
+          pwdError.style.display = 'block';
+          pwdError.innerHTML = '❌ गलत पासवर्ड! कृपया सही एडमिन पासवर्ड दर्ज करें। (Incorrect password! Enter private admin password)';
+        }
+        if (pwdInput) {
+          pwdInput.style.borderColor = '#dc2626';
+          pwdInput.focus();
+        }
+        return;
+      }
+
+      if (pwdError) pwdError.style.display = 'none';
+
+      localNotices.unshift({
+        id: 'n-' + Date.now(),
+        title: title,
+        content: `${content} (Effective: ${date})`,
+        date: date,
+        category: category
+      });
+
+      titleInput.value = '';
+      descInput.value = '';
+      if (pwdInput) {
+        pwdInput.value = '';
+        pwdInput.style.borderColor = '#cbd5e1';
+      }
+      closeNoticeModal();
+      renderNotices();
+
+      // Show alert & update chat
+      const chatContainer = document.getElementById('chat-messages');
+      if (chatContainer) {
+        const sysDiv = document.createElement('div');
+        sysDiv.className = 'msg bot';
+        sysDiv.innerHTML = `✅ <strong>नया नोटिस सफलतापूर्वक जारी हुआ (एडमिन पासवर्ड सत्यापित):</strong> ${title}<br><em>Now School AI will answer questions using this notice!</em>`;
+        chatContainer.appendChild(sysDiv);
+      }
+    }
+
+    function deleteNotice(id) {
+      const pwd = prompt('नोटिफिकेशन हटाने के लिए एडमिन पासवर्ड दर्ज करें (Enter admin password):');
+      if (pwd === null) return;
+      if (pwd.trim().toLowerCase() !== 'gahlaut') {
+        alert('❌ गलत पासवर्ड! केवल मान्य एडमिन पासवर्ड से ही नोटिस हटाया जा सकता है।');
+        return;
+      }
+      localNotices = localNotices.filter(n => n.id !== id);
+      renderNotices();
+    }
+
+    function clearAllNotices() {
+      const pwd = prompt('सभी स्कूल नोटिफिकेशन व नोटिस हटाने के लिए एडमिन पासवर्ड दर्ज करें (Enter admin password):');
+      if (pwd === null) return;
+      if (pwd.trim().toLowerCase() !== 'gahlaut') {
+        alert('❌ गलत पासवर्ड! केवल मान्य एडमिन पासवर्ड से ही सभी नोटिस हटाए जा सकते हैं।');
+        return;
+      }
+      localNotices = [];
+      renderNotices();
+      alert('सभी नोटिस हटा दिए गए हैं। School is OPEN!');
+    }
+
+    // Render notices to HTML
+    function renderNotices() {
+      const container = document.getElementById('notices-container');
+      if (!container) return;
+
+      if (localNotices.length === 0) {
+        container.innerHTML = `
+          <div style="padding: 24px; text-align: center; color: #94a3b8; font-size: 0.88rem;">
+            No active notices at this time. (School is OPEN!)<br>
+            <button onclick="openNoticeModal()" style="margin-top: 10px; background: #4f46e5; color: #fff; border: none; padding: 6px 14px; border-radius: 8px; cursor: pointer;">
+              ➕ Add Notice
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = localNotices.map(n => `
+        <div class="notice-item ${n.category}">
+          <div class="notice-title" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
+            <div>
+              <span style="font-weight: 700; color: #0f172a;">${n.title}</span>
+              <span class="notice-date" style="margin-left: 8px; font-size: 0.75rem; color: #64748b;">${n.date}</span>
+            </div>
+            <button onclick="deleteNotice('${n.id}')" title="Delete notice" style="background: none; border: none; color: #ef4444; font-size: 0.8rem; cursor: pointer; padding: 2px 6px;">✕ Delete</button>
+          </div>
+          <div class="notice-desc" style="margin-top: 6px; font-size: 0.86rem; color: #475569;">${n.content}</div>
+        </div>
+      `).join('') + `
+        <div style="text-align: right; margin-top: 10px;">
+          <button onclick="openNoticeModal()" style="background: #f1f5f9; color: #4f46e5; border: 1px solid #cbd5e1; padding: 6px 14px; border-radius: 8px; font-size: 0.82rem; font-weight: 600; cursor: pointer;">
+            ➕ Add Another Notice (नया नोटिस जोड़ें)
+          </button>
+        </div>
+      `;
+    }
+
+    // Toggle AI drawer
+    function toggleAiDrawer() {
+      const win = document.getElementById('ai-chat-window');
+      if (win.style.display === 'flex') {
+        win.style.display = 'none';
+      } else {
+        win.style.display = 'flex';
+        document.getElementById('chat-input').focus();
+      }
+    }
+
+    // Handle Quick Preset
+    function handlePreset(text) {
+      document.getElementById('embedded-ai-input').value = text;
+      sendEmbeddedQuery();
+    }
+
+    function askHoliday() {
+      toggleAiDrawer();
+      const input = document.getElementById('chat-input');
+      input.value = "Kal holiday hai kya?";
+      sendChatMessage();
+    }
+
+    // Core AI Response Engine (Server API + Deterministic Bilingual Holiday Engine)
+    async function querySchoolAI(promptText) {
+      const trimmed = promptText.trim();
+      const lower = trimmed.toLowerCase();
+
+      // 1. Try server API /api/chat if online
+      try {
+        const res = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            messages: [{ role: 'user', content: trimmed }],
+            schoolContext: { name: 'NJS Public School' }
+          })
+        });
+        if (res.ok) {
+          const data = await res.json();
+          if (data.reply) return data.reply;
+        }
+      } catch (err) {
+        // Fallback to local AI engine
+      }
+
+      // 2. Dedicated Handler: "new message" / "क्या कोई नया नोटिस आया है?" / Latest notification
+      const isNewNoticeQuery =
+        lower.includes('new message') ||
+        lower.includes('naya message') ||
+        lower.includes('naye message') ||
+        lower.includes('मैसेज') ||
+        lower.includes('message') ||
+        lower.includes('क्या कोई नया नोटिस') ||
+        lower.includes('kya koi naya notice') ||
+        lower.includes('koi naya notice') ||
+        lower.includes('naya notice') ||
+        lower.includes('नया नोटिस') ||
+        lower.includes('नया संदेश') ||
+        lower.includes('latest notice') ||
+        lower.includes('latest notification') ||
+        lower.includes('latest message') ||
+        lower.includes('notice') ||
+        lower.includes('circular') ||
+        lower.includes('notification') ||
+        lower.includes('suchna') ||
+        lower.includes('सूचना');
+
+      if (isNewNoticeQuery) {
+        if (localNotices.length === 0) {
+          return `📢 **सूचना / Notifications:**\n\nवर्तमान में एडमिन द्वारा कोई नया नोटिस या मैसेज जारी नहीं किया गया है। विद्यालय में कोई अवकाश नहीं है और **स्कूल खुला है (School is OPEN)**!`;
+        }
+        const latest = localNotices[0];
+        const isHoliday = latest.category === 'holiday' || latest.title.toLowerCase().includes('holiday') || latest.content.toLowerCase().includes('holiday');
+        return `📢 **एडमिन द्वारा जारी नवीनतम नोटिफिकेशन (Latest Notification Added by Admin):**\n\n` +
+          `📌 **शीर्षक (Title):** ${latest.title}\n` +
+          `📅 **दिनांक (Date):** ${latest.date}\n` +
+          `📝 **विवरण (Details):** ${latest.content}\n\n` +
+          (isHoliday ? `⚠️ **School Status:** इस नोटिस के अनुसार स्कूल में **छुट्टी (Holiday)** घोषित है।` : `🏫 **School Status:** स्कूल खुला है (School is OPEN)।`);
+      }
+
+      // 3. Bilingual Holiday Rule-Engine:
+      const isHolidayQuestion = 
+        lower.includes('holiday') || 
+        lower.includes('chutti') || 
+        lower.includes('chhutti') || 
+        lower.includes('leave') || 
+        lower.includes('open') || 
+        lower.includes('khula') || 
+        lower.includes('khulega') || 
+        lower.includes('band') || 
+        lower.includes('off');
+
+      if (isHolidayQuestion) {
+        const holidayNotice = localNotices.find(n => 
+          n.category === 'holiday' || 
+          n.title.toLowerCase().includes('holiday') || 
+          n.title.toLowerCase().includes('chutti') || 
+          n.title.toLowerCase().includes('chhutti') || 
+          n.content.toLowerCase().includes('holiday') || 
+          n.content.toLowerCase().includes('chutti') || 
+          n.content.toLowerCase().includes('chhutti') || 
+          n.content.toLowerCase().includes('closed')
+        );
+
+        if (holidayNotice) {
+          return `📌 **Holiday Declared / छुट्टी घोषित:**\n\n• **Hindi / Hinglish:** हाँ, स्कूल के आधिकारिक नोटिस के अनुसार स्कूल में **छुट्टी (Holiday / Leave)** है।\n  **विवरण:** ${holidayNotice.content}\n\n• **English:** Yes, as per the official school notice, the school will remain **CLOSED / on Leave**.\n  **Details:** ${holidayNotice.content}`;
+        } else {
+          return `🏫 **School is OPEN / स्कूल खुला है:**\n\n• **Hindi / Hinglish:** **स्कूल खुला है (School is OPEN)!** रिकॉर्ड में किसी भी छुट्टी (Holiday) का नोटिस नहीं है। सभी कक्षाएं अपने निर्धारित समय पर चलेंगी।\n\n• **English:** **The school is OPEN!** No holiday has been declared in official school notices. All classes will run as per normal regular schedule.`;
+        }
+      }
+
+      if (lower.includes('hastinapur') || lower.includes('trip') || lower.includes('excursion')) {
+        return `🚌 **Hastinapur Educational Excursion:**\n\nNJS Public School द्वारा प्राचीन ऐतिहासिक हस्तिनापुर (कुरु साम्राज्य व जैन मंदिर) के लिए शैक्षिक भ्रमण आयोजित किया जा रहा है। इसमें प्रमाणित टूरिस्ट बसें, स्वस्थ बुफे भोजन और 24/7 शिक्षकों की देखरेख शामिल है।`;
+      }
+
+      if (lower.includes('exam') || lower.includes('pariksha')) {
+        return `📝 **परीक्षा सूचना:** मिड-टर्म परीक्षाएं आगामी सोमवार से प्रातः 8:30 बजे से शुरू होंगी। विद्यार्थी अपना प्रवेश पत्र साथ लाएं।`;
+      }
+
+      if (lower.includes('youtube') || lower.includes('video') || lower.includes('anant')) {
+        return `▶️ **NJS Official YouTube Channel:**\n\nहमारा आधिकारिक यूट्यूब चैनल **@anantgahlaut** है: https://www.youtube.com/@anantgahlaut - यहाँ खेल व वार्षिक उत्सव के वीडियो उपलब्ध हैं।`;
+      }
+
+      return `नमस्ते! NJS Public School AI सहायक आपके प्रश्नों के लिए उपलब्ध है।\n\n• छुट्टी की जानकारी के लिए पूछें: *"कल छुट्टी है क्या?"* या *"Is school open tomorrow?"*\n• यदि छुट्टी का नोटिस है तो छुट्टी की पुष्टि होगी, और यदि कोई नोटिस नहीं है तो AI कहेगा कि स्कूल खुला है (School is OPEN)।\n• नया नोटिस जोड़ने के लिए "Add Notice" विकल्प का उपयोग करें।`;
+    }
+
+    // Embedded AI Query
+    async function sendEmbeddedQuery() {
+      const input = document.getElementById('embedded-ai-input');
+      const box = document.getElementById('embedded-ai-response');
+      const content = document.getElementById('ai-response-content');
+      const text = input.value.trim();
+      if (!text) return;
+
+      box.style.display = 'block';
+      content.innerHTML = '<span style="color: #34d399;">Thinking... (AI जवाब तैयार कर रहा है)</span>';
+
+      const reply = await querySchoolAI(text);
+      content.innerHTML = reply.replace(/\n/g, '<br>');
+    }
+
+    // Chat Drawer Messages
+    async function sendChatMessage() {
+      const input = document.getElementById('chat-input');
+      const container = document.getElementById('chat-messages');
+      const text = input.value.trim();
+      if (!text) return;
+
+      // Add user message
+      const userDiv = document.createElement('div');
+      userDiv.className = 'msg user';
+      userDiv.innerText = text;
+      container.appendChild(userDiv);
+      input.value = '';
+      container.scrollTop = container.scrollHeight;
+
+      // Loading bot message
+      const botDiv = document.createElement('div');
+      botDiv.className = 'msg bot';
+      botDiv.innerHTML = '<em>सोच रहा हूँ...</em>';
+      container.appendChild(botDiv);
+      container.scrollTop = container.scrollHeight;
+
+      const reply = await querySchoolAI(text);
+      botDiv.innerHTML = reply.replace(/\n/g, '<br>');
+      container.scrollTop = container.scrollHeight;
+    }
+
+    // Initial render
+    renderNotices();
+  </script>
+</body>
+</html>

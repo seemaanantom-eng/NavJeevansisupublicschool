@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/* Authentic classes from seemaanantom-eng.github.io/NJSpublicSchool (scho.css) */
+.njs-school-banner {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+}
+
+.njs-glass-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.njs-stabilizer-bar {
+  height: 4px;
+  background: #ffcc00;
+  border-radius: 2px;
+  animation: njsExpand 1.5s 0.3s ease-in-out forwards;
+}
+
+@keyframes njsExpand {
+  from { width: 0; }
+  to { width: 70%; }
+}
+
+.knowledge-creator {
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 1.5px;
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  border-bottom: 2px solid #4ca1af;
+  padding-bottom: 5px;
+}
+
+.stabilizer-text {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  border-left: 5px solid #2c3e50;
+  background-color: #f9f9f9;
+}
+
+.stabilizer-text strong {
+  color: #e74c3c;
+}
